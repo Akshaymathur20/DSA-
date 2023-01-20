@@ -1,5 +1,9 @@
 // package DataStructure.Recursion.easy;
 
+
+/* Question  link Leetcoode --> https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/ */
+
+
 public class SubstracProductsum {
     public static void main(String[] args) {
         int n  = 4421;
@@ -22,3 +26,5 @@ public class SubstracProductsum {
     }
     
 }
+
+/*Time complexity O(logn) */
