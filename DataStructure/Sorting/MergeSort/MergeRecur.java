@@ -13,7 +13,7 @@ public class MergeRecur {
 
     static int[] Mergetsort(int[]arr){
 
-
+ 
         //base condition
         if(arr.length==1){
             return arr;
