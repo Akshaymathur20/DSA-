@@ -1,10 +1,12 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Permutation {
     public static void main(String[] args) {
         // permutation(" ", "abc");
 
-        System.out.println(permutationCount(" ", "abc"));
+        // System.out.println(permutationCount(" ", "abc"));
+        System.out.println(permutationList(" ", "abc"));
         
     }
 
