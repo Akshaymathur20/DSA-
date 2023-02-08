@@ -1,10 +1,10 @@
-package DataStructure.Sorting.Bubblesort;
+// package DataStructure.Sorting.Bubblesort;
 
 import java.util.Arrays;
 
 public class BubbleSort {
     public static void main(String[] args) {
-        int [] arr = {5,4,3,2,1};
+        int [] arr = {2,0,2,1,1,0};
         // int [] arr = {1,2,3,4,5};
         System.out.println(Arrays.toString(arr));
         bubblesort(arr);
@@ -39,12 +39,12 @@ public class BubbleSort {
             }
             
         }
-        static void swap(int[]arr  , int first, int second){
-        int temp = arr[first];
-        arr[first] =arr[second];
-        arr[second]=temp;
+    //     static void swap(int[]arr  , int first, int second){
+    //     int temp = arr[first];
+    //     arr[first] =arr[second];
+    //     arr[second]=temp;
         
-    }
+    // }
 
     }
     
