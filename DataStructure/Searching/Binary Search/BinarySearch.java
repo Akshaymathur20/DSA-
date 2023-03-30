@@ -1,13 +1,17 @@
 import java.util.Arrays;
 
 // package DataStructure.Searching.BinarySearch;
-
+import java.util.Scanner;
 public class BinarySearch {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         int arr[] = {-15,-10,2,65,654,9868};
         // System.out.println(Arrays.toString(arr));
-        int target = 65;
-        int ans = binary(arr,target);
+        // int target = 65;
+        System.out.println("Please enter the number ");
+        int a = sc.nextInt();
+    
+        int ans = binary(arr,a);
         System.out.println(ans);
         // System.out.println(Arrays.toString(arr));
     }
