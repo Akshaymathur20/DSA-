@@ -1,5 +1,4 @@
-// package Arrays.Problems;
-
+package Arrays.Problems;
 
 import java.util.Arrays;
 
