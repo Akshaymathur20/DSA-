@@ -6,8 +6,10 @@ public class BubbleSort {
     public static void main(String[] args) {
         int [] arr = {2,0,2,1,1,0};
         // int [] arr = {1,2,3,4,5};
+
         System.out.println(Arrays.toString(arr));
         buble(arr);
+        // bubblesort(arr);
         System.out.println("Sorted array is below");
         System.out.println(Arrays.toString(arr));
         
@@ -27,6 +29,7 @@ public class BubbleSort {
             // System.out.println();
          }
     }
+    //Tha above function always runw O(n^2) time even if the array is sorted.It can be optimzed by stopping the algorithm if the inner loop didn't cause any swap so below is the optimise approach for this 
 
     static void bubblesort( int[] arr){
 

@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class RecSelection {
     public static void main(String[] args) {
         int arr[] ={5,7,8,4,3,2};
-        selection(arr, arr.length, 0, 0);
+        selection(arr, arr.length , 0, 0);
         System.out.println(Arrays.toString(arr));
         
     }
