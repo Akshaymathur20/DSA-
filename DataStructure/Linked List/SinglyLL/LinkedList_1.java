@@ -68,6 +68,25 @@ class LinkedList_1{
 
     }
 
+    //Insert using recursion 
+    public void insertRect(int val, int index)
+    {
+        head = insertRect(val, index,head);
+    }
+      private Node insertRect(int val, int index, Node node){
+
+        if(index==0){
+                Node temp = new Node(val,node);
+                size++;
+                return temp;
+        }
+        node.next = insertRect(val, index--, node.next);
+           
+        return node;
+      }
+
+    
+
 
     //Now delete from the linkedList
 
@@ -163,6 +182,108 @@ class LinkedList_1{
             
         }
     }
+
+
+    //Question 
+    public void RemoveDuplicate(){
+        Node node = head;
+
+        while(node.next!=null){
+            if( node.value==node.next.value){
+                node.next = node.next.next;
+                size--;
+            }else{
+                node = node.next;
+            }
+        }
+        tail = node;
+        tail.next = null;
+    }
+    
+    // it will delete the number which is reapeated 
+
+    // public ListNode deleteDuplicates(ListNode ) {
+        // if(head ==null){
+        //     return head;
+        // }
+        // ListNode node = head;
+        
+        // while(node.next!=null){
+        //     if(node.val == node.next.val){
+        //         node.next = node.next.next;
+        //     }else{
+        //         node = node.next;
+        //     }
+        // }
+        // return node;
+    // }
+
+
+
+    //Merge
+
+    public static  LinkedList_1 Merge(LinkedList_1 first,LinkedList_1 second){
+        Node f = first.head;
+        Node s = second.head;
+
+
+    LinkedList_1 ans = new LinkedList_1();
+
+    while(f!=null && s!=null){
+        if(f.value<s.value){
+            ans.insertEnd(f.value);
+            f= f.next;
+        }else{
+            ans.insertEnd(s.value);
+            s = s.next;
+        }
+    }
+    while(f!=null){
+     ans.insertEnd(f.value);
+     f=f.next;
+    }
+    while(s!=null){
+
+        ans.insertEnd(s.value);
+     s=s.next;
+    }
+    return ans;
+
+    }
+    public static void main(String args[]){
+        // LinkedList_1 list = new LinkedList_1();
+        
+        // list.insertEnd(1);
+        // list.insertEnd(1);
+        // list.insertEnd(2);
+        // list.insertEnd(3);
+        // list.insertEnd(3);
+        // list.insertEnd(3);
+        // list.insertEnd(4);
+
+        // list.display();
+        
+        // list.RemoveDuplicate();
+        // list.display();
+
+        LinkedList_1 first = new LinkedList_1();
+        LinkedList_1 second = new LinkedList_1();
+
+        first.insertEnd(1);
+        first.insertEnd(3);
+        first.insertEnd(5);
+
+        second.insertEnd(1);
+        second.insertEnd(2);
+        second.insertEnd(9);
+        second.insertEnd(14);
+
+        
+        first.display();
+        second.display();
+        LinkedList_1 ans = LinkedList_1.Merge(first, second);
+        ans.display();
+;    }
 
 }
 

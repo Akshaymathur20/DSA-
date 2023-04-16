@@ -23,6 +23,9 @@ public class Main {
         list.display();
         System.out.println(list.find(255));
 
+        list.insertRect(88, 2);
+        list.display();
+
 
 
     }
