@@ -250,6 +250,44 @@ class LinkedList_1{
     return ans;
 
     }
+
+    public void bubbleSOrt(){
+        bubbleSort(size-1,0);
+    }
+        private void bubbleSort(int r, int c){
+            if(r==0){
+               return;
+            }
+            
+            if(c<r){
+                 Node first = get(c);
+                 Node second = get(c+1);
+                 if(first.value> second.value){
+                    //swap
+                    if(first==head){
+                        head =second;
+                        first.next=second.next;
+                        second.next = first;
+                    }else if(second==tail){
+                        Node prev = get(c-1);
+                        prev.next = second;
+                        tail=first;
+                        first.next=null;
+                        second.next = tail;
+
+                    }else{
+                        Node prev = get(c-1);
+                        prev.next = second;
+                        first.next = second.next;
+                        second.next = first;
+                    }
+                 }
+                 bubbleSort(r,c+1);
+            }else{
+                bubbleSort(r-1,.0);
+            }
+        }
+    
     public static void main(String args[]){
         // LinkedList_1 list = new LinkedList_1();
         
@@ -283,6 +321,9 @@ class LinkedList_1{
         second.display();
         LinkedList_1 ans = LinkedList_1.Merge(first, second);
         ans.display();
+
+        ans.bubbleSort();
+        list.display();
 ;    }
 
 }
