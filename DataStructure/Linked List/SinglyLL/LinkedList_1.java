@@ -302,7 +302,156 @@ class LinkedList_1{
         }
 
         //with iterative 
-        public
+        public void reverse(){
+            if(size<2){
+                return;
+            }
+            Node prev = null;
+           Node present = head;
+           Node next = present.next;
+           while(present!=null){
+            present.next = prev;
+            prev= present;
+            present = next;
+            if(next!=null){
+                next = next.next;
+            }
+           }
+           head = prev;
+        }
+
+        public ListNode reverseBetween(ListNode head, int left, int right) {
+            if(left==right){
+                retutn hea;
+            }
+
+            //skip the first left -1 nodes;
+            ListNode current = head;
+            ListNode prev = null;
+            for(int i = 0;current!=null && i<left-1;i++){
+
+                prev = current;
+                current = current.next;                
+
+            }
+            ListNode last = prev;
+            ListNode newEnd = current;
+
+            //reverset between left and right;
+            ListNode next = current.next;
+            for (int i = 0; current!=null && i < right-left+1; i++) {
+                current.next = prev;
+                prev= current;
+                current = next;
+                if(next!=null){
+                    next = next.next;
+                }
+                
+            }
+
+         if(last!=null){
+            last.next = prev;
+         }else{
+            head = prev;
+         }
+           newEnd.next = current;
+           return head;
+        
+        }
+
+
+        public boolean isPalindrome(ListNode head){
+            ListNode mid = middleNode(head);
+            ListNode headSecond = reverseList(mid);
+            ListNode reverseHead= headSecond;
+
+            //comparing both the halves
+
+            while(head!=null && headSecond!=null){
+                if(head.val!=headSecond.val){
+                    break;   //not a palindrome
+                }
+                head= head.next;
+                headSecond= headSecond.next;
+
+            }
+            reverseList(reverseHead);
+
+            if(head==null || headSecond==null){
+                return true;
+            }
+            return false;
+        }
+
+        public void reorderList(ListNode head){
+            if(head==null || head.next ==null){
+                return;
+            }
+
+            ListNode mid = middleNode(head);
+            ListNode hs = reverseList(mid);
+            ListNode hf = head;
+
+            //reaarrange
+
+            while(hf!=null && hs!=null){
+                ListNode temp  = hf.next;
+                hf.next = hs;
+                hf = temp;
+
+                temp = hs.next;
+                hs.next = hf;
+                hs = temp;
+            
+            }
+           
+            //next of tail to null;
+            if(hf!=null){
+                hf.next = null;
+            }
+        }
+
+        public ListNode reverseKGroup(ListNode head, int k){
+
+            if(k<=1 || head==null){
+                return head;
+            }
+            ListNode current = head;
+            ListNode prev = null;
+
+            while(true){
+
+
+            ListNode last = prev;
+            ListNode newEnd = current;
+
+            //reverset between left and right;
+            ListNode next = current.next;
+            for (int i = 0; current!=null && i < k; i++) {
+                current.next = prev;
+                prev= current;
+                current = next;
+                if(next!=null){
+                    next = next.next;
+                }
+                
+            }
+
+         if(last!=null){
+            last.next = prev;
+         }else{
+            head = prev;
+         }
+           newEnd.next = current;
+           
+
+        if(current==null){
+            break;
+        }
+        prev=newEnd;
+        }
+        return head;
+    }
 
     
     public static void main(String args[]){
