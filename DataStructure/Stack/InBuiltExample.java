@@ -39,6 +39,10 @@ public class InBuiltExample {
         //Deque
 
         Deque<Integer> deque = new ArrayDeque<>();
+        deque.add(89);
+        deque.addLast(78);
+        deque.removeFirst();
+           
 
 
 
