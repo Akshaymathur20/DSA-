@@ -27,9 +27,9 @@ public class CutomStack {
         return true;
     }
 
-    public int pop() throws Exception{
+    public int pop() throws StackException{
         if(isEmpty()){
-            throw new Exception("Cannot pop form and empty stack");
+            throw new StackException("Cannot pop form and empty stack");
         }
         // int removed= data[ptr];
         // ptr--;
@@ -40,9 +40,9 @@ public class CutomStack {
 
     //what is at the top
 
-    public int peek() throws Exception{
+    public int peek() throws StackException{
         if(isEmpty()){
-            throw new Exception("Cannot peek form and empty stack");
+            throw new StackException("Cannot peek form and empty stack");
         }
         return data[ptr];
     }
