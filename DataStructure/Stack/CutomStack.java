@@ -5,9 +5,12 @@ public class CutomStack {
     protected int[] data;
     private static final int DEFAULT_SIZE  = 10;
 
+
+    //intially the pointer lies here 
     int ptr =-1;
 
     public CutomStack(){
+        //when nothing is  pass
         this(DEFAULT_SIZE);
     }
 
@@ -16,11 +19,11 @@ public class CutomStack {
 
     }
 
+    //Inseting data in it 
     public boolean push(int item){
         if(isFull()){
             System.out.println("Stack is full ");
             return false;
-
         }
         ptr++;
         data[ptr]=item;
@@ -31,11 +34,14 @@ public class CutomStack {
         if(isEmpty()){
             throw new StackException("Cannot pop form and empty stack");
         }
+    //    int removed = data[ptr];
+    //    ptr--;
+    //    return removed;
+       
         return data[ptr--];
     }
 
-    //what is at the top
-
+    //what is at the top 
     public int peek() throws StackException{
         if(isEmpty()){
             throw new StackException("Cannot peek form and empty stack");
@@ -43,13 +49,13 @@ public class CutomStack {
         return data[ptr];
     }
 
-    private boolean isFull(){
-        return ptr == data.length-1;
+    public boolean isFull(){
+        return ptr == data.length-1;  //ptr is at the last index 
 
     }
 
-    private boolean isEmpty(){
-        return ptr ==-1;
+    public boolean isEmpty(){
+        return ptr ==-1;   //when stack has no value 
     }
 
 
