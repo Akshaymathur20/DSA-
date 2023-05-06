@@ -4,7 +4,7 @@ public class StackMain {
     public static void main(String[] args) throws StackException{
         CutomStack stack = new CutomStack();
 
-         stack.push(34);
+        stack.push(34);
         stack.push(45);
         stack.push(32);
         stack.push(3);
