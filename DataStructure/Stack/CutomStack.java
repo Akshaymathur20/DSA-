@@ -31,10 +31,6 @@ public class CutomStack {
         if(isEmpty()){
             throw new StackException("Cannot pop form and empty stack");
         }
-        // int removed= data[ptr];
-        // ptr--;
-        // return removed;
-
         return data[ptr--];
     }
 
