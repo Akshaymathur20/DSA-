@@ -1,7 +1,7 @@
 package DataStructure.Stack;
 
 
-//in thi severything will be same 
+//in this severything will be same 
 
 public class DynamicStack extends CutomStack{
     public DynamicStack(){
@@ -11,8 +11,6 @@ public class DynamicStack extends CutomStack{
     public DynamicStack(int size){
         super(size);
     }
-
-
     @Override
     public boolean push(int item){
         if(this.isFull()){
@@ -29,9 +27,7 @@ public class DynamicStack extends CutomStack{
 
 
         //at this  point we know that array is no tfull 
-        //insrt itemp
+        //insert item
         return super.push(item);
-
-    }
-    
+    } 
 }

@@ -3,6 +3,7 @@ package DataStructure.Stack;
 public class StackMain {
     public static void main(String[] args) throws StackException{
         CutomStack stack = new CutomStack(5);
+        // DynamicStack stack = new DynamicStack(5); it will not give eerror 
 
         stack.push(34);
         stack.push(45);
@@ -17,7 +18,7 @@ public class StackMain {
         System.out.println(stack.pop());
         System.out.println(stack.pop());
         System.out.println(stack.pop());
-        System.out.println(stack.pop());
+        // System.out.println(stack.pop());
     }
     
 }
