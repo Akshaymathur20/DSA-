@@ -9,7 +9,6 @@ public class FIndUnique {
     }
 
     static int Unique(int[]arr){
-
         int unique =0;
 
         for(int n:arr){
