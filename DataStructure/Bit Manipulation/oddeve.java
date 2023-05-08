@@ -14,7 +14,7 @@ public class oddeve {
     static boolean isOdd(int n){
 
       return (n&1)==1;
-
+ 
         // if((n&1)==1){
         //      return true;
         // }
