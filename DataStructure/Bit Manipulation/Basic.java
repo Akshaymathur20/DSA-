@@ -42,7 +42,7 @@ class Basic {
        System.out.println("Bitwise Complement");
 
        int number = 25;
-       int result6 = ~number;     //-26
+       int result6 = ~number;     //-26    
        System.out.println(result6);   
 
         //Left Shift Operator
