@@ -36,6 +36,15 @@ class Basic {
        System.out.println(result2);
 
 
+       //BitWise Complement 
+
+       System.out.println();
+       System.out.println("Bitwise Complement");
+
+       int number = 25;
+       int result6 = ~number;     //-26
+       System.out.println(result6);   
+
         //Left Shift Operator
         System.out.println();
         System.out.println("Left Shift Operator");
@@ -43,6 +52,23 @@ class Basic {
           int num = 2;             //00000010
           int result3 = num<<2;    //000001000--> 8
        System.out.println(result3);
+
+
+        //Right Shift Operator
+        System.out.println();
+        System.out.println("Right Shift Operator");
+
+          int num1 = 8;             //00001000
+          int result4 = num1>>2;    //000000010--> 2
+       System.out.println(result4);
+
+        //Unsigned Right Shift Operator
+        System.out.println();
+        System.out.println("Right Shift Operator");
+
+          int num2 = -8;             //00001000
+          int result5 = num2>>>2;    //000000010--> 2
+       System.out.println(result5);
     }
     
 }
