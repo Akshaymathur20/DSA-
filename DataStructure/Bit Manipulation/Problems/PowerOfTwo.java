@@ -11,7 +11,8 @@ public class PowerOfTwo {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         
-        System.out.println(isPowerOfTwo(n));
+        // System.out.println(isPowerOfTwo(n));
+        System.out.println(isPowerThree(n));
         
     }
 
@@ -25,6 +26,19 @@ public class PowerOfTwo {
               return false; 
         }
         return isPowerOfTwo(n/2);     /*  if n =16  then 16/2=8 8/2=4 4/2=2 2/2 =1 */
+    }
+
+    static boolean isPowerThree(int n){
+        if(n==1)
+        return true;
+
+        if(n%3!=0 && n<=0){
+            return false;
+        }
+
+        return isPowerThree(n/3);
+
+
     }
 }
 
