@@ -17,7 +17,6 @@ public class BinarySearch {
             this.value = value;
         }
     }
-
     private Node root;
 
     //Insert elements
