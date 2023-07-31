@@ -52,16 +52,11 @@ public class BinaryTree{
     }
 
     private void display(Node node, String indent){
-        if(node!=null){
+        if(node==null){
             return;
         }
         System.out.println(indent + node.value);
         display(node.left, indent);
         display(node.right , indent + " \t");
-    }
-
-    public static void main(String[] args) {
-        
-    }
-    
+    }    
 }
