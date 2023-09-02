@@ -2,7 +2,7 @@
 
 Collection of Data Structure and Algorithm from basics  
 
-Will update all the those modules till august .
+Will update all the those modules till September.
 
 
 Data Structure And Algorithm  are importants to crack any interview of the companay.
