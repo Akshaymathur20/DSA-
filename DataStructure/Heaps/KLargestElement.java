@@ -20,6 +20,7 @@ public class KLargestElement {
             }
         }
 
+        // return minHeap.peek();  --> it will print kth largest element in our case it is 10
         //Top three largest element in the array code
 
         //The code will easily remove all the smalles element in the heap and when it becomes k==3 then we will return at the end heap which stores the top three largest element in the array 

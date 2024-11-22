@@ -2,9 +2,6 @@
 
 // import java.util.Collection;
 // import java.util.Collections;
-import java.util.PriorityQueue;
-import java.util.Arrays;
-
 import java.util.*;
 class CustomComparator implements Comparator<Integer> {
  
@@ -51,7 +48,7 @@ public class KthSmallestElement {
         int n = arr.length;
 
         //Below line can directly pass without making any othere class using 
-        // PriorityQueue<Integer> maxheap = new PriorityQueue<>(Collections.reverseOrder());
+        // PriorityQueue<Integer> maxheap = new PriorityQueue<>(Collections.reverseOrder()); 
         PriorityQueue<Integer> maxheap = new PriorityQueue<>(new CustomComparator());
 
         for(int i = 0;i<n;i++){
@@ -60,7 +57,15 @@ public class KthSmallestElement {
                 maxheap.remove();
             }
         }
-        return maxheap.peek();
+        // return maxheap.peek();    --> it will print the kth smalles element which in our case is 7
+
+         while(maxheap.size()>0){
+            System.out.print(maxheap.peek()+" ");
+            maxheap.remove();
+        }
+        
+        // //It wil print the elementt which are present in the max heap;
+        return maxheap.element();
 
     }
     

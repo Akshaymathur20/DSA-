@@ -15,6 +15,7 @@ public class InsertionSort {
             for (int j = i+1; j >0; j--) {
                 if(arr[j]<arr[j-1]){
                     swap(arr,j,j-1);
+                    System.out.println(Arrays.toString(arr)+ "i ="+ i  +" j = "+j); 
                     // int temp = arr[j];
                     // arr[j]=arr[j-1];
                     // arr[j-1]= temp;  
