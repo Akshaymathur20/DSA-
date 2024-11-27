@@ -14,6 +14,7 @@ public class Question1 {
         int k = 4;
 
         System.out.println(solve(arr, k));
+        System.out.println(solve1(arr, k));
     }
 
 
@@ -50,8 +51,8 @@ static int solve1(int arr[],int k){
     for(int i =0;i<k;i++){
         int maxx = 0;
         for(int j=1;j<arr.length;j++){
-            if(arr[i]>arr[maxx]){
-                maxx=i;
+            if(arr[j]>arr[maxx]){
+                maxx=j;
             }
         }
         totalChocolates += arr[maxx];
