@@ -64,5 +64,5 @@ static int solve1(int arr[],int k){
   //tc (o(n)) k steps --> O(k*n);
   //sc =(O(1))
 
-  //good for small arrays for largeter array or performce maxHeap better
+  //good for small arrays but for larger array or performce maxHeap better
 }

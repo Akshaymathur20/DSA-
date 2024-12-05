@@ -8,8 +8,6 @@ public class KSortedArray {
 
          PriorityQueue<Integer> minHeap = new PriorityQueue<>();
 
-
-
         for(int i =0;i<=k;i++){
             minHeap.add(arr[i]);
         }
@@ -23,31 +21,31 @@ public class KSortedArray {
             System.out.println(minHeap.remove());
         }
 
-        System.out.println(KsortedArray(arr,k));
+        // System.out.println(KsortedArray(arr,k));
     }
 
-    static int KsortedArray(int arr[], int k) {
-        int n = arr.length;
+    // static int KsortedArray(int arr[], int k) {
+    //     int n = arr.length;
 
-        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+    //     PriorityQueue<Integer> minHeap = new PriorityQueue<>();
 
 
 
-        for(int i =0;i<=k;i++){
-            minHeap.add(arr[i]);
-        }
+    //     for(int i =0;i<=k;i++){
+    //         minHeap.add(arr[i]);
+    //     }
 
-        for(int i=k+1;i<n;i++){
-            // System.out.println(minHeap.remove());
-            minHeap.remove();
-            minHeap.add(arr[i]);
-        }
+    //     for(int i=k+1;i<n;i++){
+    //         // System.out.println(minHeap.remove());
+    //         minHeap.remove();
+    //         minHeap.add(arr[i]);
+    //     }
 
-        while(minHeap.size()>0){
-            // System.out.println(minHeap.remove());
-            minHeap.remove();
-        }
-        return minHeap.element();
-    }
+    //     while(minHeap.size()>0){
+    //         // System.out.println(minHeap.remove());
+    //         minHeap.remove();
+    //     }
+    //     return minHeap.element();
+    
     
 }
