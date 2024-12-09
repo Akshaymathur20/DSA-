@@ -35,8 +35,7 @@ public class BfsGraph {
                 }
             }
         }
-    }
-    
+    }    
     public void addEdgeInList(int source,int destination){
         adjList.get(source).add(destination);
          adjList.get(destination).add(source);   //Remove for a directed graph
