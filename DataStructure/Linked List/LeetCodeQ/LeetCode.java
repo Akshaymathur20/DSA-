@@ -47,6 +47,13 @@ public class LeetCode {
 
  }
 
+ //There can be many follow up quesition 
+ //detect a loop
+ //find the where the loop started
+ //happy number
+ //palindrome nubmer
+ 
+
 
 
 

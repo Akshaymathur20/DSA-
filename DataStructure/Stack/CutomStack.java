@@ -12,7 +12,7 @@ public class CutomStack {
     public CutomStack(){
         //when nothing is  pass
         this(DEFAULT_SIZE);
-    }
+    } 
 
     public CutomStack(int size){
            this.data  = new int[size];
